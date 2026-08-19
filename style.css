@@ -1,0 +1,811 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #1b1117 0%,
+            #090909 55%,
+            #020202 100%
+        );
+
+    color: white;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.container {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 5;
+
+    padding: 20px;
+}
+
+
+/* =========================================
+   TEXT
+========================================= */
+
+.small-text {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    color: #d98aaa;
+
+    margin-bottom: 12px;
+}
+
+
+h1 {
+
+    font-size: 42px;
+
+    font-weight: normal;
+
+    color: #f5b4ce;
+
+    text-shadow:
+        0 0 10px
+        rgba(245, 180, 205, 0.5),
+
+        0 0 30px
+        rgba(245, 180, 205, 0.15);
+}
+
+
+.instruction {
+
+    margin-top: 10px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    color: #999;
+}
+
+
+/* =========================================
+   MACHINE
+========================================= */
+
+.machine {
+
+    width: 290px;
+
+    margin-top: 30px;
+
+    filter:
+        drop-shadow(
+            0 0 25px
+            rgba(220, 120, 165, 0.15)
+        );
+
+    transition:
+        transform 0.2s;
+}
+
+
+/* =========================================
+   MACHINE TOP
+========================================= */
+
+.machine-top {
+
+    height: 60px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #333333,
+            #111111
+        );
+
+    border:
+        2px solid #4a4a4a;
+
+    border-radius:
+        25px 25px 8px 8px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #f1a9c5;
+
+    letter-spacing: 3px;
+
+    box-shadow:
+        inset 0 0 15px #000,
+
+        0 0 20px
+        rgba(241, 169, 197, 0.1);
+}
+
+
+/* =========================================
+   GLASS
+========================================= */
+
+.glass {
+
+    height: 240px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(60, 60, 60, 0.25),
+            rgba(5, 5, 5, 0.95)
+        );
+
+    border-left:
+        2px solid #4a4a4a;
+
+    border-right:
+        2px solid #4a4a4a;
+
+    border-bottom:
+        2px solid #4a4a4a;
+
+    border-radius:
+        0 0 45% 45%;
+
+    box-shadow:
+        inset 0 0 35px #000;
+}
+
+
+/* =========================================
+   GLASS SHINE
+========================================= */
+
+.glass-shine {
+
+    position: absolute;
+
+    top: 15px;
+
+    left: 25px;
+
+    width: 30px;
+
+    height: 170px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(255,255,255,0.08),
+            transparent
+        );
+
+    transform:
+        rotate(10deg);
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   GUMBALLS
+========================================= */
+
+.gumball {
+
+    position: absolute;
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 50%;
+
+    box-shadow:
+
+        inset -7px -8px 10px
+        rgba(0,0,0,0.3),
+
+        inset 5px 5px 8px
+        rgba(255,255,255,0.5),
+
+        0 0 10px
+        rgba(255,255,255,0.08);
+}
+
+
+/* Pink */
+
+.ball-pink {
+
+    background: #ff6fae;
+
+    left: 35px;
+
+    top: 45px;
+}
+
+
+/* Blue */
+
+.ball-blue {
+
+    background: #65c9ff;
+
+    left: 115px;
+
+    top: 30px;
+}
+
+
+/* Purple */
+
+.ball-purple {
+
+    background: #ae86ff;
+
+    right: 35px;
+
+    top: 55px;
+}
+
+
+/* Yellow */
+
+.ball-yellow {
+
+    background: #ffd45f;
+
+    left: 65px;
+
+    bottom: 45px;
+}
+
+
+/* Green */
+
+.ball-green {
+
+    background: #65df9b;
+
+    right: 95px;
+
+    bottom: 30px;
+}
+
+
+/* Orange */
+
+.ball-orange {
+
+    background: #ff9661;
+
+    right: 25px;
+
+    bottom: 65px;
+}
+
+
+/* Extra balls */
+
+.gumball.second {
+
+    transform:
+        scale(0.8);
+}
+
+
+/* =========================================
+   MACHINE BODY
+========================================= */
+
+.machine-body {
+
+    height: 150px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #303030,
+            #101010
+        );
+
+    border:
+        2px solid #4a4a4a;
+
+    border-radius:
+        8px 8px 25px 25px;
+
+    padding: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* =========================================
+   DISPENSER
+========================================= */
+
+.dispenser {
+
+    width: 100px;
+
+    height: 50px;
+
+    background: #050505;
+
+    border:
+        2px solid #3c3c3c;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   DISPENSED BALL
+========================================= */
+
+#dispensedBall {
+
+    width: 30px;
+
+    height: 30px;
+
+    border-radius: 50%;
+
+    display: none;
+
+    box-shadow:
+
+        inset -5px -6px 8px
+        rgba(0,0,0,0.3),
+
+        inset 4px 4px 7px
+        rgba(255,255,255,0.5),
+
+        0 0 15px
+        rgba(255,150,200,0.5);
+}
+
+
+#dispensedBall.show {
+
+    display: block;
+
+    animation:
+        ballDrop 0.7s ease;
+}
+
+
+@keyframes ballDrop {
+
+    0% {
+
+        transform:
+            translateY(-80px);
+
+        opacity: 0;
+    }
+
+    60% {
+
+        transform:
+            translateY(8px);
+
+        opacity: 1;
+    }
+
+    80% {
+
+        transform:
+            translateY(-3px);
+    }
+
+    100% {
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+#dispenseButton {
+
+    margin-top: 15px;
+
+    padding:
+        10px 25px;
+
+    background:
+        transparent;
+
+    border:
+        1px solid #d87fa5;
+
+    border-radius:
+        20px;
+
+    color:
+        #f3a8c5;
+
+    cursor:
+        pointer;
+
+    font-size:
+        12px;
+
+    letter-spacing:
+        2px;
+
+    transition:
+        0.3s;
+}
+
+
+#dispenseButton:hover {
+
+    background:
+        #d87fa5;
+
+    color:
+        #080808;
+
+    box-shadow:
+        0 0 20px
+        rgba(216,127,165,0.5);
+
+    transform:
+        translateY(-2px);
+}
+
+
+#dispenseButton:active {
+
+    transform:
+        scale(0.92);
+}
+
+
+/* =========================================
+   MACHINE SHAKE
+========================================= */
+
+.machine.shake {
+
+    animation:
+        shake 0.4s ease;
+}
+
+
+@keyframes shake {
+
+    0% {
+        transform:
+            translateX(0);
+    }
+
+    25% {
+        transform:
+            translateX(-6px)
+            rotate(-1deg);
+    }
+
+    50% {
+        transform:
+            translateX(6px)
+            rotate(1deg);
+    }
+
+    75% {
+        transform:
+            translateX(-4px)
+            rotate(-1deg);
+    }
+
+    100% {
+        transform:
+            translateX(0);
+    }
+}
+
+
+/* =========================================
+   MESSAGE BACKGROUND
+========================================= */
+
+.message-box {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        rgba(0,0,0,0.75);
+
+    backdrop-filter:
+        blur(6px);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.4s ease;
+
+    z-index: 20;
+}
+
+
+.message-box.show {
+
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.message-content {
+
+    width:
+        min(90%, 450px);
+
+    padding:
+        45px 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #1b1518,
+            #090909
+        );
+
+    border:
+        1px solid #d87fa5;
+
+    border-radius:
+        18px;
+
+    text-align:
+        center;
+
+    box-shadow:
+        0 0 50px
+        rgba(216,127,165,0.25);
+
+    transform:
+        scale(0.8);
+
+    transition:
+        transform 0.4s ease;
+}
+
+
+.message-box.show
+.message-content {
+
+    transform:
+        scale(1);
+}
+
+
+.flower {
+
+    font-size:
+        35px;
+
+    margin-bottom:
+        20px;
+}
+
+
+#message {
+
+    color:
+        #f5b5cf;
+
+    font-size:
+        19px;
+
+    line-height:
+        1.8;
+}
+
+
+#closeMessage {
+
+    margin-top:
+        25px;
+
+    background:
+        transparent;
+
+    border:
+        none;
+
+    color:
+        #999;
+
+    cursor:
+        pointer;
+
+    font-size:
+        13px;
+}
+
+
+/* =========================================
+   SAKURA
+========================================= */
+
+#sakura-container {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    pointer-events:
+        none;
+
+    overflow:
+        hidden;
+
+    z-index:
+        2;
+}
+
+
+.petal {
+
+    position:
+        absolute;
+
+    width:
+        10px;
+
+    height:
+        14px;
+
+    background:
+        #f3a8c5;
+
+    border-radius:
+        100% 0 100% 0;
+
+    opacity:
+        0.7;
+
+    animation:
+        fall linear infinite;
+}
+
+
+@keyframes fall {
+
+    0% {
+
+        transform:
+            translateY(-10vh)
+            rotate(0deg)
+            translateX(0);
+    }
+
+    50% {
+
+        transform:
+            translateY(50vh)
+            rotate(180deg)
+            translateX(40px);
+    }
+
+    100% {
+
+        transform:
+            translateY(110vh)
+            rotate(360deg)
+            translateX(-40px);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+    h1 {
+
+        font-size:
+            30px;
+    }
+
+
+    .machine {
+
+        transform:
+            scale(0.9);
+    }
+
+
+    .instruction {
+
+        font-size:
+            13px;
+    }
+}
